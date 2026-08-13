@@ -1,7 +1,7 @@
 # Concept evolution notes
 
 ## Initial idea
-The original direction was a broader AR version of Notion, including a large wrap-around whiteboard around the user. This explored the idea of spatial notes and speech-to-writing, but it risked feeling enclosed, socially awkward, and difficult to edit because much of the interaction happened in the air.
+The original direction was a broader AR version of Notion, including a large wrap-around whiteboard around the user. This explored the idea of spatial notes and speech-to-writing, but it risked feeling enclosed, socially awkward, and difficult to edit because much of the interaction happened in the air. This not only created difficulty when editing the document but it was also difficult to create the drawings in this environment.
 
 ## Refinement
 The concept was refined into a surface-based workspace. Instead of surrounding the user, a Notion document is selected with an L-shaped hand gesture and placed onto a real flat surface such as a table. This gives the user a more familiar and stable workspace.
