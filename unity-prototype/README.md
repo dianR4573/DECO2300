@@ -7,11 +7,12 @@ The prototype simulates a future Meta Quest / mixed-reality Notion interaction i
 ## Prototype flow
 
 1. Press `L` to simulate the L-shaped hand gesture and open a floating Notion-style document picker.
-2. Press `1` to select the **House Sketch** page and place it on the table.
-3. Press `D` to reveal the 2D sketch on the page.
-4. Press `Space` to simulate lifting the sketch into a 3D object.
-5. Use `WASD` or arrow keys to move the 3D object.
-6. Press `R` to reset the prototype.
+2. Press `1` or click **House Sketch** to select the page.
+3. Move the page with the mouse, then click or press `Enter` to anchor it on the table.
+4. Press `D` to reveal the 2D sketch on the page. You can optionally add ink by dragging on the page.
+5. Press `Space` to simulate lifting the sketch into a 3D object.
+6. Drag the object or use `WASD` / arrow keys to move it. `Q` / `E` rotate and the scroll wheel resizes it.
+7. Press `R` to reset the prototype.
 
 ## How to open
 
