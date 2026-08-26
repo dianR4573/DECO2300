@@ -43,7 +43,8 @@ This is a **horizontal / experiential prototype**. It gives users an overall imp
 ## Testing documents
 
 - [`docs/test-preparation.md`](docs/test-preparation.md) — preparation notes, testing objective, methodology, setup, and evaluation focus.
-- [`docs/in-class-testing.md`](docs/in-class-testing.md) — in-class testing script, task sequence, questions, and results table.
+- [`docs/in-class-testing.md`](docs/in-class-testing.md) — in-class testing script, task sequence, and questions.
+- [`docs/testing-results.md`](docs/testing-results.md) — results table, participant notes, findings summary, and iteration reflection template.
 
 ## Files
 
