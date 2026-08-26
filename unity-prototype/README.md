@@ -40,6 +40,11 @@ This is a **horizontal / experiential prototype**. It gives users an overall imp
 - Is the simulated lifting interaction clear enough?
 - Can users understand moving the 3D object in space?
 
+## Testing documents
+
+- [`docs/test-preparation.md`](docs/test-preparation.md) — preparation notes, testing objective, methodology, setup, and evaluation focus.
+- [`docs/in-class-testing.md`](docs/in-class-testing.md) — in-class testing script, task sequence, questions, and results table.
+
 ## Files
 
 - `Assets/Scripts/NotionARPrototype.cs` — runtime prototype logic and generated scene objects.
