@@ -1,0 +1,11 @@
+
+
+# Unity generated files
+unity-prototype/Library/
+unity-prototype/Temp/
+unity-prototype/Obj/
+unity-prototype/Logs/
+unity-prototype/UserSettings/
+unity-prototype/.vs/
+unity-prototype/*.csproj
+unity-prototype/*.sln
