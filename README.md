@@ -8,6 +8,8 @@ Current concept: **Notion AR — Turning 2D Notes into 3D Spatial Ideas**.
 
 The Design Concept Report materials are in [`design-concept-report/`](design-concept-report/).
 
+Evaluation 2 is in [`design-concept-report/evaluation-2/`](design-concept-report/evaluation-2/).
+
 ## Interactive Prototype 1 — Unity horizontal prototype
 
 The Interactive Prototype 1 Unity project is in [`unity-prototype/`](unity-prototype/).
