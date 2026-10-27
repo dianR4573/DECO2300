@@ -9,3 +9,5 @@ unity-prototype/UserSettings/
 unity-prototype/.vs/
 unity-prototype/*.csproj
 unity-prototype/*.sln
+unity-prototype/.utmp/
+unity-prototype/*.log

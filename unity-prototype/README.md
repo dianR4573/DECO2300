@@ -1,53 +1,57 @@
-# Notion AR — Unity Interactive Prototype 1
+# Notion AR — Unity Interactive Prototype 2b (Meta Quest Mixed Reality Build)
 
-This Unity project contains the Phase 1 horizontal / experiential prototype for **DECO2300: Notion AR — Turning 2D Notes into 3D Spatial Ideas**.
+This Unity project contains **Interactive Prototype 2b** for **DECO2300: Notion AR — Turning 2D Notes into 3D Spatial Ideas**.
 
-The prototype simulates a future Meta Quest / mixed-reality Notion interaction in a desktop Unity scene. It is intentionally not a full Notion clone and does not implement real AR passthrough, hand tracking, or automatic 2D-to-3D model generation.
+It upgrades the IP2a Meta Quest build with **mixed reality passthrough**, **real table anchoring**, a **Virtual Table fallback toggle**, a **one-job-per-button control scheme**, and **first-run controller guidance**. The step order, reveal and lift animation are unchanged from IP2a.
 
-## Prototype flow
+---
 
-1. Press `L` to simulate the L-shaped hand gesture and open a floating Notion-style document picker.
-2. Press `1` or click **House Sketch** to select the page.
-3. Move the page with the mouse, then click or press `Enter` to anchor it on the table.
-4. Press `D` to reveal the 2D sketch on the page. You can optionally add ink by dragging on the page.
-5. Press `Space` to simulate lifting the sketch into a 3D object.
-6. Drag the object or use `WASD` / arrow keys to move it. `Q` / `E` rotate and the scroll wheel resizes it.
-7. Press `R` to reset the prototype.
+## What Changed in IP2b
 
-## How to open
+1. **Controls (right controller only, one job per button)**
+   - **A**: opens the recent Notion pages list in step 1. That is A's only job.
+   - **Trigger**: select / confirm. Picks **House Sketch**, anchors the page on the table, reveals the sketch, lifts it into 3D. Pointed at the board's **Mode** button it switches Real Table / Virtual Table.
+   - **Grip (hold)**: grab and move the 3D house. Releasing Grip drops it on the table.
+   - **Thumbstick up/down**: while anchoring, raises or lowers the surface to match your real table.
+   - **B**: reset, and recentre the workspace in front of you.
 
-1. Open Unity Hub.
-2. Add/open the folder: `unity-prototype/`.
-3. Open `Assets/Scenes/MainScene_NotionAR.unity`.
-4. Press Play.
+2. **Grab clarity and controller hints**
+   - The house only moves while Grip is held. A **"Hold grip to grab"** badge floats above the house until the first real grab (a quick tap keeps it up).
+   - A hint above the right controller shows the button for the current step and hides once the step is done.
 
-If Unity asks to regenerate project files or upgrade the project version, allow it.
+3. **Mixed reality mode**
+   - **Passthrough**: `MetaQuestPassthroughFeature` (an OpenXR feature) turns on `XR_FB_passthrough` and draws the real room behind everything the app clears to transparent.
+   - **Real table anchoring**: point at your table, match the height with the thumbstick (the green outline and page preview show the surface), and pull Trigger. Reveal, lift and move then happen on that surface. There is no automatic plane detection; height is set by hand.
+   - **Workspace placement**: when the headset starts tracking, the board, page list and table area appear in front of where you are facing. Press **B** to bring them in front of you again.
+   - **Virtual Table fallback**: the Mode button on the left board switches to the IP2a virtual room and table.
 
-## If the scene appears empty
+---
 
-Open the Unity menu:
+## Quest Controller Mapping
 
-`Tools > DECO2300 > Rebuild Notion AR Main Scene`
+| Step | Interaction | Quest input | Editor fallback |
+|---|---|---|---|
+| 1. Welcome | Open recent pages | **A** | `A` key |
+| 2. Pick page | Select "House Sketch" | Ray + **Trigger** | Mouse aim + left click |
+| 3. Anchor | Place the page on the table | Ray + **Trigger** (stick sets height) | Left click (`Up`/`Down` keys set height) |
+| 4. Reveal | Show the 2D sketch | **Trigger** | Left click |
+| 5. Lift | Lift the sketch into a 3D house | **Trigger** | Left click |
+| 6. Move | Grab and move the house | Hold **Grip** (release drops) | Hold right mouse |
+| Mode | Real Table / Virtual Table | Ray at board Mode button + **Trigger** | `V` key |
+| Reset | Reset and recentre | **B** | `B` key |
 
-This editor utility creates the camera, light, and prototype controller, then saves the main scene.
+---
 
-## Assessment focus
+## How to Build & Sideload onto Meta Quest
 
-This is a **horizontal / experiential prototype**. It gives users an overall impression of the concept and supports testing of the key design assumptions:
+### 1. Build the APK
 
-- Is the table-based Notion workspace understandable?
-- Does the 2D-to-3D transformation feel useful?
-- Is the simulated lifting interaction clear enough?
-- Can users understand moving the 3D object in space?
+In Unity (`6000.3.21f1`): `Tools > DECO2300 > Build Quest APK`
 
-## Testing documents
+The APK is written to `unity-prototype/Builds/NotionAR_Prototype2b.apk`.
 
-- [`docs/test-preparation.md`](docs/test-preparation.md) — preparation notes, testing objective, methodology, setup, and evaluation focus.
-- [`docs/in-class-testing.md`](docs/in-class-testing.md) — in-class testing script, task sequence, and questions.
-- [`docs/testing-results.md`](docs/testing-results.md) — results table, participant notes, findings summary, and iteration reflection template.
+### 2. Sideload onto the headset
 
-## Files
-
-- `Assets/Scripts/NotionARPrototype.cs` — runtime prototype logic and generated scene objects.
-- `Assets/Editor/NotionARSceneBuilder.cs` — editor utility for rebuilding the scene.
-- `Assets/Scenes/MainScene_NotionAR.unity` — main scene.
+```bash
+/Applications/Unity/Hub/Editor/6000.3.21f1/PlaybackEngines/AndroidPlayer/SDK/platform-tools/adb install -r unity-prototype/Builds/NotionAR_Prototype2b.apk
+```
