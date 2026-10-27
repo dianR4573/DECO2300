@@ -14,6 +14,10 @@ The Interactive Prototype 1 Unity project is in [`unity-prototype/`](unity-proto
 
 The prototype simulates a Meta Quest / mixed-reality Notion interaction: selecting a Notion-style page, placing it on a table, revealing a 2D sketch, lifting it into a 3D object, and moving the object in space.
 
+## Design Evaluation 1
+
+The Evaluation 1 report and AI acknowledgement coversheet are in [`design-evaluation-1/`](design-evaluation-1/).
+
 ## Design Evaluation 2
 
 The Evaluation 2 report, AI acknowledgement coversheet and IP2a testing plan are in [`design-evaluation-2/`](design-evaluation-2/).
