@@ -17,3 +17,7 @@ The prototype simulates a Meta Quest / mixed-reality Notion interaction: selecti
 ## Design Evaluation 2
 
 The Evaluation 2 report, AI acknowledgement coversheet and IP2a testing plan are in [`design-evaluation-2/`](design-evaluation-2/).
+
+## Design Evaluation 2b
+
+The Evaluation 2b report, AI acknowledgement coversheet, IP2b testing plan and filled-in IP2b testing plan (Week 12 results) are in [`design-evaluation-2b/`](design-evaluation-2b/).
